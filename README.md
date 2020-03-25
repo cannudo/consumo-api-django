@@ -24,10 +24,10 @@ Para iniciar minhas pesquisas, precisei escolher uma API existente que me retorn
 ### Escolha dos recursos
 Depois de ler a documentação, escolhi o recurso que me retornava uma lista de municípios de determinada unidade federativa:
 
-[barra lateral da API do IBGE](/image.png)
+![barra lateral da API do IBGE](/image.png)
 
 Mas para isso, precisava antes ter em mãos o id da unidade federativa. Em [outra seção do site](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet), consegui o id 24, referente a unidade federativa do **Rio Grande do Norte**, inspecionando o [JSON](https://servicodados.ibge.gov.br/api/v1/localidades/estados/) que me foi retornado no navegador:
 
-[JSON visto do navegador Firefox](/image2.png)
+![JSON visto do navegador Firefox](/image2.png)
 
 Então, de posse do ID, acessei: https://servicodados.ibge.gov.br/api/v1/localidades/estados/24/municipios
