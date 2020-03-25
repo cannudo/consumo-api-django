@@ -26,17 +26,19 @@ Para construir o conhecimento de forma mais concisa, você poderá acompanhar a 
 Inicialmente, precisaremos escolher uma API existente que nos retorne dados sem necessidade de autenticação, isto é, dados aos quais não precisamos nos identificar para ter acesso. O IBGE, em seu [site de APIs](https://servicodados.ibge.gov.br/api/docs), disponibiliza mais ou menos 12 serviços do tipo. Vamos escolher a API de **localidades**, que é referente às divisões político-administrativas do Brasil. Você pode ler a documentação referente: [API de localidades](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1). Quando fizermos uma requisição do tipo GET para o endereço do serviço, a API nos retornará um JSON carregado de informações referentes.
 
 ### Escolha dos recursos
-Depois de ler a documentação, escolhi o recurso que me retornava uma lista de municípios de determinada unidade federativa:
+APIs geralmente são baseadas em recursos. Na documentação, conseguimos encontrar a descrição de cada um deles. Mas, a título do exemplo, escolheremos o que nos retorna um JSON carregado de municípios de determinada unidade federativa:
 
 ![barra lateral da API do IBGE](/image.png)
 
-Mas para isso, precisava antes ter em mãos o id da unidade federativa. Em [outra seção do site](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet), consegui o id 24, referente a unidade federativa do **Rio Grande do Norte**, inspecionando o [JSON](https://servicodados.ibge.gov.br/api/v1/localidades/estados/) que me foi retornado no navegador:
+Mas para isso, precisamos antes ter em mãos o id da unidade federativa. Em [outra seção do site](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet), conseguimos o id 24, referente a unidade federativa do **Rio Grande do Norte**, inspecionando o [JSON](https://servicodados.ibge.gov.br/api/v1/localidades/estados/) que nos é retornado no navegador:
 
 ![JSON visto do navegador Firefox](/image2.png)
 
-Então, de posse do ID, acessei: https://servicodados.ibge.gov.br/api/v1/localidades/estados/24/municipios
+**Observação**: Para ter essa visualização, precisei acessar o [endereço](https://servicodados.ibge.gov.br/api/v1/localidades/estados/) pelo Mozilla Firefox. Caso você utilize outro navegador, o retorno talvez possa não ser formatado. Nesse caso, o que você verá é um texto em formato JSON.
 
-Agora, com esse endereço me retornando informações referentes aos municípios, suas micro e mesorregiões em formato JSON, estava preparado para o código.
+De posse do ID, acessaremos: https://servicodados.ibge.gov.br/api/v1/localidades/estados/24/municipios
+
+Esse é o endereço que será efetivamente utilizado. Ele nos retorna todos os municípios do Rio Grande do Norte, bem como informações de sua micro e mesorregião.
 
 ## Projeto Django
 Para consumir dados dessa API, precisaremos apenas das views e dos templates no Django. Inicializaremos um projeto Django:
