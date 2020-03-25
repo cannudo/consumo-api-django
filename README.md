@@ -31,3 +31,25 @@ Mas para isso, precisava antes ter em mãos o id da unidade federativa. Em [outr
 ![JSON visto do navegador Firefox](/image2.png)
 
 Então, de posse do ID, acessei: https://servicodados.ibge.gov.br/api/v1/localidades/estados/24/municipios
+
+Agora, com esse endereço me retornando informações referentes aos municípios, suas micro e mesorregiões em formato JSON, estava preparado para o código.
+
+## Projeto Django
+Para consumir dados dessa API, precisaremos apenas das views e dos templates no Django. Inicializaremos um projeto Django:
+
+![Terminal após o início do projeto Django](/image3.png)
+
+**Observação:** após iniciar o projeto, mudei o nome da pasta para _codigo_
+
+E depois, uma aplicação chamada _ibge_:
+
+![Terminal após o inicio da aplicação](/image4.png)
+
+### Configuração básica
+Na pasta da aplicação, criei um diretório chamado _templates_, bem como os arquivos _index.html_ dentro dele e _urls.py_, externamente:
+
+![printscreen da árvore de diretórios](/image6.png)
+
+Também adicionei a aplicação recém-criada ao projeto:
+
+![printscreen do arquivo de configuração do projeto](/image5.png)
