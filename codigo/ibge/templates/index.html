@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Municípios do RN</h1>
+    <ol>
+      {% for indice, municipio in municipios.items %}
+      <li><b>{{ municipio.nome }}</b>: (id  #{{ municipio.id }})</li>
+      Onde fica: {{ municipio.microrregiao.nome }} ({{ municipio.microrregiao.mesorregiao.nome }})
+      {% endfor %}
+    </ol>
+  </body>
+</html>
