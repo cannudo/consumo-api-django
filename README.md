@@ -16,14 +16,14 @@ Este tutorial não pretende ensinar, completamente
 É bastante recomendável que você tenha tido um pré-contato com os itens acima, embora, ocasionalmente, alguns desses assuntos possam vir a ser discutidos brevemente em algum momento
 
 ## Funcionamento
-Para construir o conhecimento de forma mais concisa, você poderá acompanhar a explicação deste arquivo e todo o código gerado estará disponível em [codigo](/codigo)
+Para construir o conhecimento de forma mais concisa, você poderá acompanhar a explicação deste arquivo e todo o código gerado estará disponível na pasta [/codigo](/codigo)
 
 ---
 
 # Tutorial
 
 ## API: IBGE
-Para iniciar minhas pesquisas, precisei escolher uma API existente que me retornasse dados sem necessidade de autenticação. O IBGE, em seu [site de APIs](https://servicodados.ibge.gov.br/api/docs), disponibiliza mais ou menos 12 serviços do tipo. Eu escolhi a API de **localidades**, que é referente às divisões político-administrativas do Brasil. Leia a documentação referente: [API de localidades](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)
+Inicialmente, precisaremos escolher uma API existente que nos retorne dados sem necessidade de autenticação. O IBGE, em seu [site de APIs](https://servicodados.ibge.gov.br/api/docs), disponibiliza mais ou menos 12 serviços do tipo. Vamos escolher a API de **localidades**, que é referente às divisões político-administrativas do Brasil. Você pode ler a documentação referente: [API de localidades](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1). Ela nos retornará um JSON, carregado de informações referentes.
 
 ### Escolha dos recursos
 Depois de ler a documentação, escolhi o recurso que me retornava uma lista de municípios de determinada unidade federativa:
