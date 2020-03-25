@@ -13,4 +13,4 @@ def index(request):
         "municipios": dicionario
     }
 
-    return render(request, "aplicacao/index.html", contexto)
+    return render(request, "index.html", contexto)
