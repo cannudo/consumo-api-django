@@ -9,6 +9,7 @@ Para seguir com este tutorial, é recomendável que você tenha noções básica
 - Python 3.6 e suas estruturas de dados
 - HTML
 - APIs REST
+- Manipulação de JSONs
 
 ## Funcionamento
 Para construir o conhecimento de forma mais concisa, você poderá acompanhar a explicação deste arquivo e todo o código gerado estará disponível em [codigo](/codigo)
