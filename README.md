@@ -1,15 +1,16 @@
 # Tutorial: consumindo uma API com Django
 
-O objetivo deste tutorial é compartilhar o conhecimento obtido por mim após dois dias de pesquisa sobre como consumir uma API usando Django. Precisei disso para o meu projeto integrador na faculdade e estava batendo cabeça porque, às vezes, um arquivo JSON é muito grande e é difícil de manipulá-lo, já que Python não oferece isso de forma nativa. Depois de muita pesquisa, finalmente consegui construir um front-end, ainda que arcaico, mas consumindo de uma API em produção. 
+O objetivo deste tutorial é compartilhar o conhecimento obtido por mim após dois dias de pesquisa sobre como consumir uma API usando Django. Precisei disso para o meu projeto integrador na faculdade e estava batendo cabeça porque, às vezes, um arquivo JSON é muito grande e é difícil de manipulá-lo, já que Python não oferece isso de forma nativa. Depois de muita pesquisa, finalmente consegui construir um front-end, ainda que arcaico, mas consumindo de uma API em produção.
 
-## Pré-requisitos
+## O que isto não é
+Este tutorial não pretende ensinar, completamente
+- **Django**: a equipe do Django tem uma documentação ótima! Você pode acessá-la [clicando aqui](https://www.djangoproject.com/). Pretendo fazer um outro projeto compartilhando meu conhecimento sobre Django também, mas não é o caso deste repositório
+- **Python**: na [W3Schools](https://www.w3schools.com) tem um [tutorial ótimo](https://www.w3schools.com/python/default.asp) sobre Python
+- **HTML**: não vamos usar muitos elementos HTML aqui, mas você também pode acessar um [tutorial completo na W3Schools]
+- **APIs REST**: definitivamente, não
+- **Manipulação de JSONs**: o que faremos aqui é converter JSON para uma estrutura mais compreensível para o Python. Mas é interessante, se você está querendo se aprofundar em consumo de APIs. A W3Schools tem uma [subseção sobre JSON](https://www.w3schools.com/js/js_json_intro.asp)
 
-Para seguir com este tutorial, é recomendável que você tenha noções básicas sobre:
-- Django 2.0
-- Python 3.6 e suas estruturas de dados
-- HTML
-- APIs REST
-- Manipulação de JSONs
+É bastante recomendável que você tenha tido um pré-contato com os itens acima, embora, ocasionalmente, alguns desses assuntos possam vir a ser discutidos brevemente em algum momento
 
 ## Funcionamento
 Para construir o conhecimento de forma mais concisa, você poderá acompanhar a explicação deste arquivo e todo o código gerado estará disponível em [codigo](/codigo)
