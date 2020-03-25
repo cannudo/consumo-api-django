@@ -7,7 +7,7 @@ O objetivo deste tutorial é compartilhar o conhecimento obtido por mim após do
 
 ## O que isto não é
 Este tutorial não pretende ensinar, completamente
-- **Django**: a equipe do Django tem uma documentação ótima! Você pode acessá-la [clicando aqui](https://www.djangoproject.com/). Pretendo fazer um outro projeto compartilhando meu conhecimento sobre Django também, mas não é o caso deste repositório
+- **Django**: a comunidade do Django tem uma documentação ótima! Você pode acessá-la [clicando aqui](https://www.djangoproject.com/). Pretendo fazer um outro projeto compartilhando meu conhecimento sobre Django também, mas não é o caso deste repositório
 - **Python**: na [W3Schools](https://www.w3schools.com) tem um [tutorial ótimo](https://www.w3schools.com/python/default.asp) sobre Python
 - **HTML**: não vamos usar muitos elementos HTML aqui, mas você também pode acessar um [tutorial completo na W3Schools]
 - **APIs REST**: definitivamente, não
