@@ -56,6 +56,24 @@ Também adicionei a aplicação recém-criada ao projeto:
 
 Após isso, configurei as rotas:
 
-[em cima, arquivo de urls do projeto, em baixo, da aplicação](/image7.png)
+![em cima, arquivo de urls do projeto, em baixo, da aplicação](/image7.png)
 
 Depois de fazer essas configurações básicas do Django, está na hora de views e templates
+
+## Views do Django
+No código das [views](/codigo/ibge/views.py) da aplicação, temos a seguinte ordem:
+- Na linha 1, importamos o módulo que vai facilitar o trabalho de encaminhamento dos templates ao usuário
+- Na linha 2, importamos o módulo que trabalha com requisições HTTP (talvez você tenha que instalá-lo pelo pip: `pip install requests`)
+- Na linha 4, abrimos a função que atenderá ao usuário quando ele digitar a URL [localhost:8000](localhost:8000)
+- Na linha 5, colocamos a URL da API anteriormente selecionada
+- Na linha 6, acionamos o método `get()` do módulo requests, passando a string `api` como parâmetro
+  - A requisição GET viaja até a API
+- Na linha 7, pegamos uma lista de retorno de `requisicao`
+  - O método `json()` só sera bem sucedido se a string de resposta de `requisicao` se esta for escrita em formato JSON
+  - Como isso é uma demonstração, assumiremos que vai dar certo e não trataremos possíveis exceções
+- Na linha 8, declaramos um dict vazio
+  - `dicionario` vai armazenar os valores do list
+  - Template não trabalha com lists, só com dicts
+- Na linha 10, estamos preenchendo nosso dict
+- Na linha 12, colocamos esse dict em uma variável que será encaminhada para o template
+- Na linha 16, a view retorna o template index.html para o usuário e a variável de contexto para o desenvolvedor
