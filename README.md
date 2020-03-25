@@ -2,6 +2,9 @@
 
 O objetivo deste tutorial é compartilhar o conhecimento obtido por mim após dois dias de pesquisa sobre como consumir uma API usando Django. Precisei disso para o meu projeto integrador na faculdade e estava batendo cabeça porque, às vezes, um arquivo JSON é muito grande e é difícil de manipulá-lo, já que Python não oferece isso de forma nativa. Depois de muita pesquisa, finalmente consegui construir um front-end, ainda que arcaico, mas consumindo de uma API em produção.
 
+## O que isto é
+- **Compartilhamento de conhecimentos**: este projeto pretende passar o conhecimento que o autor obteve através de pesquisas
+
 ## O que isto não é
 Este tutorial não pretende ensinar, completamente
 - **Django**: a equipe do Django tem uma documentação ótima! Você pode acessá-la [clicando aqui](https://www.djangoproject.com/). Pretendo fazer um outro projeto compartilhando meu conhecimento sobre Django também, mas não é o caso deste repositório
