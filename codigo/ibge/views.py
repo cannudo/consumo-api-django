@@ -1,6 +1,5 @@
 from django.shortcuts import render
-import requests # Pacote que constrói requisições HTTP e consome respostas
-import json # Pacote que trabalha com JSONs
+import requests # faz requisições HTTP
 
 def index(request):
     api = "https://servicodados.ibge.gov.br/api/v1/localidades/estados/24/municipios"
