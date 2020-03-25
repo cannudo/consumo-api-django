@@ -53,3 +53,9 @@ Na pasta da aplicação, criei um diretório chamado _templates_, bem como os ar
 Também adicionei a aplicação recém-criada ao projeto:
 
 ![printscreen do arquivo de configuração do projeto](/image5.png)
+
+Após isso, configurei as rotas:
+
+[em cima, arquivo de urls do projeto, em baixo, da aplicação](/image7.png)
+
+Depois de fazer essas configurações básicas do Django, está na hora de views e templates
