@@ -77,3 +77,17 @@ No código das [views](/codigo/ibge/views.py) da aplicação, temos a seguinte o
 - Na linha 10, estamos preenchendo nosso dict
 - Na linha 12, colocamos esse dict em uma variável que será encaminhada para o template
 - Na linha 16, a view retorna o template index.html para o usuário e a variável de contexto para o desenvolvedor
+
+## Templates do Django
+No [código de template](/codigo/ibge/templates/index.html), fazemos uso de um HTML simples, misturado com alguns padrões da _linguagem de templates Django_
+- Na linha 10, fazemos um loop dentro do dicionário que foi passada dentro da variável de contexto na view
+  - O dicionário vem carregado de int, str e outros dicts:
+
+  ![printscreen de parte do JSON retornado visto do Firefox](/image8.png)
+
+  - Temos, para cada item do dicionário um id (int), um nome (str) e uma microrregião (dict).
+- Com esses dados, podemos mostrar ao usuário:
+  - O nome de cada municipio
+  - O id de cada municipio
+  - O nome de cada microrregião
+  - O nome de cada mesorregião
