@@ -8,7 +8,7 @@ O objetivo deste tutorial é compartilhar o conhecimento obtido por mim após do
 ## O que isto não é
 Este tutorial não pretende ensinar, completamente
 - **Django**: a comunidade do Django tem uma documentação ótima! Você pode acessá-la [clicando aqui](https://www.djangoproject.com/). Pretendo fazer um outro projeto compartilhando meu conhecimento sobre Django também, mas não é o caso deste repositório
-- **Python**: na [W3Schools](https://www.w3schools.com) tem um [tutorial ótimo](https://www.w3schools.com/python/default.asp) sobre Python
+- **Python**: a [W3Schools](https://www.w3schools.com) oferece um [tutorial ótimo](https://www.w3schools.com/python/default.asp) sobre Python
 - **HTML**: não vamos usar muitos elementos HTML aqui, mas você também pode acessar um [tutorial completo na W3Schools](https://www.w3schools.com/html/default.asp)
 - **APIs REST**: definitivamente, não! Sequer usaremos muitos verbos HTTP. Só usaremos o GET. Mas não vamos aprender os princípios REST.
 - **Manipulação de JSONs**: o nosso trabalho com JSON será decodificá-lo para uma estrutura que seja compreensível ao Python. Mas é um assunto interessante de se aprender, se você está querendo se aprofundar em consumo de APIs. A W3Schools tem uma [subseção sobre isso](https://www.w3schools.com/js/js_json_intro.asp)
@@ -41,13 +41,15 @@ De posse do ID, acessaremos: https://servicodados.ibge.gov.br/api/v1/localidades
 Esse é o endereço que será efetivamente utilizado. Ele nos retorna todos os municípios do Rio Grande do Norte, bem como informações de sua micro e mesorregião.
 
 ## Projeto Django
-Para consumir dados dessa API, precisaremos apenas das views e dos templates no Django. Inicializaremos um projeto Django:
+Para consumir esses dados, precisaremos apenas das views e dos templates do Django, portanto, podemos ignorar toda a parte dos models e da ORM.
+
+Assumindo que você tenha o módulo `django` instalado no Python, poderemos iniciar o projeto em termos de código:
 
 ![Terminal após o início do projeto Django](/image3.png)
 
-**Observação:** após iniciar o projeto, mudei o nome da pasta para _codigo_
+**Observação:** após iniciar o projeto, renomeei a pasta gerada para _codigo_.
 
-E depois, uma aplicação chamada _ibge_:
+E depois, uma aplicação chamada `ibge`:
 
 ![Terminal após o inicio da aplicação](/image4.png)
 
