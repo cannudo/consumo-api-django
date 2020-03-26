@@ -54,17 +54,19 @@ E depois, uma aplicação chamada `ibge`:
 ![Terminal após o inicio da aplicação](/image4.png)
 
 ### Configuração básica
-Na pasta da aplicação, criei um diretório chamado _templates_, bem como os arquivos _index.html_ dentro dele e _urls.py_, externamente:
+Na pasta da aplicação, criaremos um diretório chamado _templates_, contendo um arquivo _index.html_. Subindo um nível, criaremos um arquivo chamado _urls.py_:
 
-![printscreen da árvore de diretórios](/image6.png)
+![printscreen da árvore de diretórios](/image10.png)
 
 Também adicionei a aplicação recém-criada ao projeto:
 
-![printscreen do arquivo de configuração do projeto](/image5.png)
+![printscreen do arquivo de configuração do projeto](/image6.png)
 
-Após isso, configurei as rotas:
+Após isso, teremos que configurar as rotas:
 
 ![em cima, arquivo de urls do projeto, em baixo, da aplicação](/image7.png)
+
+Na imagem acima, temos dois arquivos de URLs abertos. O de cima é o o projeto. O de baixo, é o recém-criado, da aplicação.
 
 Depois de fazer essas configurações básicas do Django, está na hora de views e templates
 
