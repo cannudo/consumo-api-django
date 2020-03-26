@@ -2,14 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Municípios do RN</title>
   </head>
   <body>
-    <h1>Municípios do RN</h1>
     <ol>
       {% for indice, municipio in municipios.items %}
-      <li><b>{{ municipio.nome }}</b>: (id  #{{ municipio.id }})</li>
-      Onde fica: {{ municipio.microrregiao.nome }} ({{ municipio.microrregiao.mesorregiao.nome }})
+      <h1>{{ municipio.nome }} (#{{ municipio.id }})</h1>
+      <p>{{ municipio.nome }} fica na messoregião <b>{{ municipio.microrregiao.nome }}</b>, no {{ municipio.microrregiao.mesorregiao.nome }}</p>
       {% endfor %}
     </ol>
   </body>
