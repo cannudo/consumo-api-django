@@ -104,9 +104,7 @@ O código nem sempre foi redondinho assim. No começo, eu bati bastante a cabeç
 
 Depois dessas pesquisas, eu descobri que:
 1. JSON, ao contrário do que eu pensava, não é a mesma coisa que um dict Python. Em primeiro lugar, JSON é uma string escrita em síntaxe de objetos JavaScript. Isso implica a qualquer string escrita em JSON poder representar um objeto JavaScript. Ao mesmo tempo, é um formato que independe de linguagem. Já um dicionário Python é uma estrutura de dados, representa dados na memória do servidor e é acessado por uma espécie de índice, que se chama _chave_. Apesar da semelhança, JSON ainda é str. Quando um servidor troca informações com o navegador web, a informação só pode ser texto.
-2. JSONs e dicts tem uma apresentação visual bastante parecida. Por esse motivo, não conseguia notar diferença entre um e outro. Veja:
-
-![console interativo do Python](/image11.png)  
+2. JSONs e dicts tem uma apresentação visual bastante parecida. Por esse motivo, não conseguia notar diferença entre um e outro. Veja: ![console interativo do Python](/image11.png)  
 
 
 ## Templates do Django
