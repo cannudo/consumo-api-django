@@ -89,12 +89,25 @@ Então:
 - Na linha 6, acionamos o método `get()` do módulo requests, passando um str como parâmetro. Esse str deve ser um endereço acessível na internet
   - Se OK, a requisição viaja até a API e faz uma solicitação get
 - Na linha 7, tratamos a resposta de `requisicao`
-  - **O método `json()` só sera bem sucedido no str de resposta de `requisicao` se esta for escrita em formato JSON**
+  - **O método `json()` só sera bem sucedido no str de resposta de `requisicao` se for escrito em formato JSON**
 - Na linha 8, declaramos um dict vazio
   - `dicionario` vai armazenar os valores de uma lista, que eu não conseguia passar como contexto
 - Na linha 10, estamos preenchendo nosso dict
 - Na linha 12, colocamos esse dict em uma variável que será encaminhada para o template
 - Na linha 16, a view retorna o template index.html para o usuário e a variável de contexto para o desenvolvedor
+
+### Dificuldades enfrentadas
+O código nem sempre foi redondinho assim. No começo, eu bati bastante a cabeça! Foi aí que entraram os dois dias de pesquisa. Basicamente:
+1. Eu não sabia o que era JSON realmente
+2. Não entendia a diferença entre um dicionário Python e um JSON
+3. Não entendia porque o template me retornava uma exceção _unhasable type_ toda vez que eu tentava passar o retorno de `requisicao.json()` diretamente para o template
+
+Depois dessas pesquisas, eu descobri que:
+1. JSON, ao contrário do que eu pensava, não é a mesma coisa que um dict Python. Em primeiro lugar, JSON é uma string escrita em síntaxe de objetos JavaScript. Isso implica a qualquer string escrita em JSON poder representar um objeto JavaScript. Ao mesmo tempo, é um formato que independe de linguagem. Já um dicionário Python é uma estrutura de dados, representa dados na memória do servidor e é acessado por uma espécie de índice, que se chama _chave_. Apesar da semelhança, JSON ainda é str. Quando um servidor troca informações com o navegador web, a informação só pode ser texto.
+2. JSONs e dicts tem uma apresentação visual bastante parecida. Por esse motivo, não conseguia notar diferença entre um e outro. Veja:
+
+![console interativo do Python](/image11)  
+
 
 ## Templates do Django
 No [código de template](/codigo/ibge/templates/index.html), fazemos uso de um HTML simples, misturado com alguns padrões da _linguagem de templates Django_
