@@ -5,11 +5,13 @@
     <title>Municípios do RN</title>
   </head>
   <body>
-    <ol>
+    <ul>
       {% for indice, municipio in municipios.items %}
-      <h1>{{ municipio.nome }} (#{{ municipio.id }})</h1>
-      <p>{{ municipio.nome }} fica na messoregião <b>{{ municipio.microrregiao.nome }}</b>, no {{ municipio.microrregiao.mesorregiao.nome }}</p>
+      <li>
+        <h1>{{ municipio.nome }} (#{{ municipio.id }})</h1>
+        <p>{{ municipio.nome }} fica na messoregião <b>{{ municipio.microrregiao.nome }}</b>, no {{ municipio.microrregiao.mesorregiao.nome }}</p>
+      </li>
       {% endfor %}
-    </ol>
+    </ul>
   </body>
 </html>
