@@ -58,9 +58,11 @@ Na pasta da aplicação, criaremos um diretório chamado _templates_, contendo u
 
 ![printscreen da árvore de diretórios](/image10.png)
 
-Também adicionei a aplicação recém-criada ao projeto:
+Adicionaremos a aplicação ao projeto:
 
 ![printscreen do arquivo de configuração do projeto](/image6.png)
+
+- **Por que tenho que seguir o passo acima se não vamos usar a parte do models?** Porque, mais a frente, usaremos os templates. Caso esse passo não seja executado, o Django é incapaz de achar esse template dentro do projeto.
 
 Após isso, teremos que configurar as rotas:
 
@@ -68,22 +70,28 @@ Após isso, teremos que configurar as rotas:
 
 Na imagem acima, temos dois arquivos de URLs abertos. O de cima é o o projeto. O de baixo, é o recém-criado, da aplicação.
 
-Depois de fazer essas configurações básicas do Django, está na hora de views e templates
+- **Observação**: no arquivo de baixo, linha 4,  não há uma aspa de fechamento em _name_. Já arrumei o código no repositório. A desencargo de consciência, o código correto é: `path('', views.index, name = 'index'),`
+
+Depois de seguir este passo-a-passo, você pode conferir se os seus códigos estão corretos. Acesse a pasta [/codigo](/codigo).
 
 ## Views do Django
-No código das [views](/codigo/ibge/views.py) da aplicação, temos a seguinte ordem:
-- Na linha 1, importamos o módulo que vai facilitar o trabalho de encaminhamento dos templates ao usuário
-- Na linha 2, importamos o módulo que trabalha com requisições HTTP (talvez você tenha que instalá-lo pelo pip: `pip install requests`)
+No código das [views](/codigo/ibge/views.py) da aplicação, precisaremos:
+1. Importar o módulo `requests` (talvez você tenha que instalá-lo pelo pip: `pip install requests`)
+2. Definir a função responsável pela lógica de retorno à solicitação do usuário
+3. Fazer a requisição à API anteriormente escolhida
+4. Decodificar o JSON recebido
+5. Passar o JSON decodificado como contexto no retorno da função
+
+Então:
+
+- Na linha 2, importamos o módulo que trabalha com as requisições HTTP
 - Na linha 4, abrimos a função que atenderá ao usuário quando ele digitar a URL [localhost:8000](localhost:8000)
-- Na linha 5, colocamos a URL da API anteriormente selecionada
-- Na linha 6, acionamos o método `get()` do módulo requests, passando a string `api` como parâmetro
-  - A requisição GET viaja até a API
-- Na linha 7, pegamos uma lista de retorno de `requisicao`
-  - O método `json()` só sera bem sucedido se a string de resposta de `requisicao` se esta for escrita em formato JSON
-  - Como isso é uma demonstração, assumiremos que vai dar certo e não trataremos possíveis exceções
+- Na linha 6, acionamos o método `get()` do módulo requests, passando um str como parâmetro. Esse str deve ser um endereço acessível na internet
+  - Se OK, a requisição viaja até a API e faz uma solicitação get
+- Na linha 7, tratamos a resposta de `requisicao`
+  - **O método `json()` só sera bem sucedido no str de resposta de `requisicao` se esta for escrita em formato JSON**
 - Na linha 8, declaramos um dict vazio
-  - `dicionario` vai armazenar os valores do list
-  - Template não trabalha com lists, só com dicts
+  - `dicionario` vai armazenar os valores de uma lista, que eu não conseguia passar como contexto
 - Na linha 10, estamos preenchendo nosso dict
 - Na linha 12, colocamos esse dict em uma variável que será encaminhada para o template
 - Na linha 16, a view retorna o template index.html para o usuário e a variável de contexto para o desenvolvedor
