@@ -187,7 +187,7 @@ E eis os resultados das pesquisas:
 
 2. No começo, analisava o JSON pelo navegador. O Firefox é ótimo exibindo JSONs, mas me parecia antiquado, uma vez que eu já havia convertido e a estrutura, no template, era a de um dicionário. Então, no console interativo, rodei:
 
-![console interativo do Python após a inspeção do dict](/imagens/image12.png)
+![console interativo do Python após a inspeção do dict](/imagens/image13.png)
 
 Então, soube que esse dict era formado por outros dicts, e que cada dict tem um _nome_, um _id_, um dict _mesorregiao_ e _microrregiao_. A partir daí, ficou fácil me achar dentro dele.
 
