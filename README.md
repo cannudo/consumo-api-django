@@ -136,7 +136,7 @@ Depois dessas pesquisas, eu descobri que:
 
 2. JSONs e dicts tem uma apresentação visual bastante parecida. Por esse motivo, não conseguia notar diferença entre um e outro. Veja:
 
-![console interativo do Python](/image11.png)
+![console interativo do Python](imagens/image11.png)
 
 De início, criei um dicionário e um JSON que guardava esse dicionário. Quando eu ia imprimir os dois não via absolutamente nenhuma diferença, salvo pelo tipo de aspa. Então, olhei o tipo de um e de outro, só para uma inquietação maior. Não fazia sentido algum que um fosse dict e o outro str! Mas aí comecei a olhar na W3Schools as [especifidades da formatação](https://www.w3schools.com/js/js_json_intro.asp) e notei o que já estava na minha frente: **JSON é texto** escrito sob uma notação específica! Então, para garantir, pedi os valores dos objetos sem a função `print()`, que retorna apenas uma representação textual dos objetos. Dessa forma, consegui ver os dois objetos tais quais estavam escritos na memória do servidor. **Eureka!** Então, o tempo todo, era isso: JSON é só um str, que pode virar um dict. Dict é uma estrutura de dados.
 
