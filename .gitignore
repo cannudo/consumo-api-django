@@ -1,0 +1,5 @@
+venv
+manage.py
+db.sqlite3
+.idea
+.gitignore
